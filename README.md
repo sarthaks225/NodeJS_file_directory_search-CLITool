@@ -166,3 +166,63 @@ The script is intended to be executed from the command line with parameters spec
 
 ## Conclusion
 `find.js` provides a flexible and efficient solution for searching files and directories in Node.js environments. Its modular structure, error handling mechanisms, and real-time feedback features make it suitable for a variety of search scenarios.
+
+# GitHub Documentation for `findJs.bat`
+## Overview
+The findJs.bat file is a Windows Batch script designed to execute the find.js Node.js script with command-line arguments. This batch file simplifies the process of running the Node.js script by allowing users to invoke it with a single command, passing any necessary arguments directly.
+
+## Code Explanation
+
+`@echo off
+node C:\gitFolder\NodeJS_file_directory_search-CLITool\find.js %*`
+
+## Detailed Breakdown
+1. **`@echo off`**:
+
+* Purpose: This command disables the display of the command itself in the terminal, making the output cleaner. Without this, each command in the batch file would be printed to the terminal before being executed.
+
+2. **`node C:\gitFolder\NodeJS_file_directory_search-CLITool\find.js %*`**:
+
+* Purpose: This command runs the find.js script using Node.js.
+* Details:
+    * **`node`**: The command to invoke the Node.js runtime.
+    * **`C:\gitFolder\NodeJS_file_directory_search-CLITool\find.js`**: The full path to the find.js script. Make sure this path is correct and points to the location of your find.js file.
+    * **'%*'**: A batch parameter that represents all the arguments passed to the batch script. This allows you to forward any arguments given to the batch file directly to the Node.js script.
+
+## Usage Instructions
+1. Preparation:
+
+* Ensure you have Node.js installed on your system and the node command is accessible from the command line.
+* **Place the `findJs.bat` file in a convenient location, preferably one that is included in your system's PATH environment variable for easy access.**
+
+2. Execution:
+
+* Open a Command Prompt window.
+* `Run the findJs.bat` script followed by the arguments required by find.js
+`findJs.bat [searchType] [searchTerm] [searchLocation]
+`
+
+* **Examples:**
+    * Search for a file named `resume.pdf` in `C:\Documents`:
+
+            `findJs.bat file resume.pdf C:\Documents`
+
+    * Search for a directory named example_dir in D:\Projects:
+
+            `findJs.bat dir example_dir D:\Projects`
+
+
+## Integration with find.js
+The `findJs.bat` script is designed to work seamlessly with `find.js`. When you run the batch script with the appropriate arguments, it delegates the execution to `find.js`, passing all provided arguments. This allows `find.js` to process the arguments and perform the file or directory search as intended.
+
+By using `findJs.bat`, you streamline the process of executing the `find.js` script, making it more accessible and user-friendly, especially for users who may not be familiar with `Node.js` or `command-line operations`.
+
+## Conclusion
+The `findJs.bat` batch script is a convenient wrapper for the `find.js` `Node.js` script, enabling easy execution with command-line arguments. It enhances usability and ensures that users can quickly and efficiently perform file and directory searches without needing to directly interact with `Node.js` commands.
+
+
+## Demo Video by running batch 
+
+![App Screenshot](https://i9.ytimg.com/vi/JgWhJY-P9Xg/mqdefault.jpg?sqp=CNydjLMG-oaymwEmCMACELQB8quKqQMa8AEB-AH-CYAC0AWKAgwIABABGCwgZSgqMA8=&rs=AOn4CLBFEXl3-LuCHc3oINSg955WoIrlMg)
+(https://www.youtube.com/watch?v=JgWhJY-P9Xg)
+
